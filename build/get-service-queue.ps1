@@ -13,10 +13,10 @@ Function AppendQueueVariable([string]$folderName)
 	}
 }
 
-if ($env:buildQueueInit)
+if ($env:BUILDQUEUEINIT)
 {
-	Write-Host "Build Queue Init: $env:buildQueueInit"
-	Write-Host "##vso[task.setvariable variable=buildQueue;isOutput=true]$env:buildQueueInit"
+	Write-Host "Build Queue Init: $env:BUILDQUEUEINIT"
+	Write-Host "##vso[task.setvariable variable=buildQueue;isOutput=true]$env:BUILDQUEUEINIT"
 	exit 0
 }
 
